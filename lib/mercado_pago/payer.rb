@@ -1,6 +1,7 @@
 module MercadoPago
   class Payer
     include Virtus.model
+    
     attribute :id, String
     attribute :email, String
     attribute :type, String

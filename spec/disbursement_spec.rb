@@ -20,7 +20,7 @@ RSpec.describe MercadoPago::Disbursement do
               "quantity" => 1,
               "unit_price" => 12.21
           }
-      ]
+        ]
       }
     end
 
