@@ -7,5 +7,7 @@ module MercadoPago
     attribute  :notification_url, String
     attribute :payer, Payer
     attribute :payments, Array[PaymentInfo]
+    attribute :disbursements, Array[Disbursement]
+    attribute :binary_mode, Boolean, :default => false
   end
 end

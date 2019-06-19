@@ -124,5 +124,37 @@ RSpec.describe MercadoPago::AdvancedPayment do
       expect(subject.payments[0].date_of_expiration).to eq('2019-06-30T21:52:49.000-04:00')
     end
 
+    it 'assigns disbursements' do
+      expect(subject.disbursements.size).to eq(1)
+    end
+
+    it 'assigns disbursements.id' do
+      expect(subject.disbursements[0].id).to eq(88056321)
+    end
+
+    it 'assigns disbursements.amount' do
+      expect(subject.disbursements[0].amount).to eq(12.21)
+    end
+
+    it 'assigns disbursements.external_reference' do
+      expect(subject.disbursements[0].external_reference).to eq('id-123')
+    end
+
+    it 'assigns disbursements.collector_id' do
+      expect(subject.disbursements[0].collector_id).to eq(123456)
+    end
+
+    it 'assigns disbursements.application_fee"' do
+      expect(subject.disbursements[0].application_fee).to eq(1.2)
+    end
+
+    it 'assigns disbursements.money_release_days"' do
+      expect(subject.disbursements[0].money_release_days).to eq(20)
+    end
+
+    it 'assigns binary_mode default false"' do
+      expect(subject.binary_mode).to eq(false)
+    end
+
   end
 end
