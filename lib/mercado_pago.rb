@@ -1,4 +1,5 @@
-require "mercado_pago/version"
+require 'virtus'
+require 'entities'
 
 module MercadoPago
   # Your code goes here...
