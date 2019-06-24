@@ -1,6 +1,5 @@
 module MercadoPago
-  class Address
-    include Virtus.model
+  class Address < MercadoPago::Base
 
     attribute :zip_code, String
     attribute :street_name, String

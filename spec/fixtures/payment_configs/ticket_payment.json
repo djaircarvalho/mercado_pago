@@ -1,0 +1,72 @@
+{
+  "application_id": "4401258639222046",
+  "payments": [
+    {
+      "date_of_expiration": "2019-06-30T21:52:49.000-04:00",
+      "payment_method_id": "bolbradesco",
+      "payment_type_id": "ticket",
+      "transaction_amount": 130,
+      "installments": 1,
+      "processing_mode": "aggregator",
+      "campaign_id": "",
+      "coupon_code": "",
+      "description": "Service charge",
+      "differential_pricing_id": "",
+      "statement_descriptor": "WWW.MktSplitterMLBTEST.COM.BR",
+      "external_reference": "extPayment"
+    }
+  ],
+  "disbursements": [
+    {
+      "amount": 130,
+      "external_reference": "ext1",
+      "collector_id": 438055858,
+      "application_fee": 1,
+      "additional_info": {
+        "ip_address": null,
+        "items": [
+          {
+            "id": "item-ID-1234",
+            "title": "Item Title",
+            "description": "Item description",
+            "picture_url": "https://some_image.jpg",
+            "category_id": "art",
+            "quantity": 1,
+            "unit_price": 130
+          }
+        ],
+        "payer": null,
+        "shipments": {
+          "receiver_address": {
+            "zip_code": "5700",
+            "street_name": "Street",
+            "street_number": 123,
+            "floor": "4",
+            "apartment": "C"
+          }
+        }
+      }
+    }
+  ],
+  "payer": {
+    "email": "test_user_p@testuser.com",
+    "first_name": "Amanda",
+    "last_name": "Martins",
+    "identification": {
+      "type": "CPF",
+      "number": "30539945005"
+    }
+  },
+  "order": {
+    "type": "mercadopago",
+    "id": "123123123123"
+  },
+  "external_reference": "externalSplitter",
+  "description": "",
+  "binary_mode": true,
+  "metadata": {
+    "asd": "asd",
+    "qwe": "qwe"
+  },
+  "notification_url": "https://9af20ad2.ngrok.io/inbound"
+}

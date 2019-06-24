@@ -1,6 +1,7 @@
+require_relative 'disbursement/additional_info'
+
 module MercadoPago
-  class Disbursement
-    include Virtus.model
+  class Disbursement < MercadoPago::Base
 
     attribute :id, Integer
     attribute :amount, Float
@@ -8,6 +9,7 @@ module MercadoPago
     attribute :collector_id, Integer
     attribute :application_fee, Float
     attribute :money_release_days, Float
-    attribute :items, Array[Item]
+    attribute :additional_info, AdditionalInfo
+    
   end
 end

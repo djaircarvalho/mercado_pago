@@ -10,8 +10,9 @@ RSpec.describe MercadoPago::Disbursement do
         "collector_id" => 123456,
         "application_fee" => 1.2,
         "money_release_days" => 20,
-        "items" => [
-          {
+        "additional_info" => {
+          "items" => [
+            {
               "id" => "item-ID-1234",
               "title" => "Title of the item",
               "description" => "Item description",
@@ -19,8 +20,9 @@ RSpec.describe MercadoPago::Disbursement do
               "category_id" => "art",
               "quantity" => 1,
               "unit_price" => 12.21
-          }
-        ]
+            }
+          ]
+        }
       }
     end
 
@@ -51,35 +53,35 @@ RSpec.describe MercadoPago::Disbursement do
     end
 
     it 'assigns items' do
-      expect(subject.items.size).to eq(1)
+      expect(subject.additional_info.items.size).to eq(1)
     end
     
     it 'assigns items.id' do
-      expect(subject.items[0].id).to eq('item-ID-1234')
+      expect(subject.additional_info.items[0].id).to eq('item-ID-1234')
     end
     
     it 'assigns items.title' do
-      expect(subject.items[0].title).to eq('Title of the item')
+      expect(subject.additional_info.items[0].title).to eq('Title of the item')
     end
     
     it 'assigns items.description' do
-      expect(subject.items[0].description).to eq('Item description')
+      expect(subject.additional_info.items[0].description).to eq('Item description')
     end
     
     it 'assigns items.picture_url' do
-      expect(subject.items[0].picture_url).to eq('https://some_image.jpg')
+      expect(subject.additional_info.items[0].picture_url).to eq('https://some_image.jpg')
     end
     
     it 'assigns items.category_id' do
-      expect(subject.items[0].category_id).to eq('art')
+      expect(subject.additional_info.items[0].category_id).to eq('art')
     end
     
     it 'assigns items.quantity' do
-      expect(subject.items[0].quantity).to eq(1)
+      expect(subject.additional_info.items[0].quantity).to eq(1)
     end
     
     it 'assigns items.unit_price' do
-      expect(subject.items[0].unit_price).to eq(12.21)
+      expect(subject.additional_info.items[0].unit_price).to eq(12.21)
     end
   end
 end

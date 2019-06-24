@@ -1,6 +1,5 @@
 module MercadoPago
-  class PaymentInfo
-    include Virtus.model
+  class PaymentInfo < MercadoPago::Base
 
     attribute :id, Integer
     attribute :status, String

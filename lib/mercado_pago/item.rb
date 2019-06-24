@@ -1,6 +1,5 @@
 module MercadoPago
-  class Item
-    include Virtus.model
+  class Item < MercadoPago::Base
     
     attribute :id, String
     attribute :title, String

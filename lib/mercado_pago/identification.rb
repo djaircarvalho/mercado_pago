@@ -1,6 +1,5 @@
 module MercadoPago
-  class Identification
-    include Virtus.model
+  class Identification < MercadoPago::Base
 
     attribute :type, String
     attribute :number, String

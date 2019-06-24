@@ -1,4 +1,5 @@
 require 'mercado_pago/version'
+require 'mercado_pago/base'
 require 'mercado_pago/phone'
 require 'mercado_pago/item'
 require 'mercado_pago/disbursement'

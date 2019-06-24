@@ -1,6 +1,5 @@
 module MercadoPago
-  class Phone
-    include Virtus.model
+  class Phone < MercadoPago::Base
 
     attribute :area_code, String
     attribute :number, String

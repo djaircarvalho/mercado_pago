@@ -1,6 +1,7 @@
 require 'virtus'
 require 'entities'
 require 'mercado_pago/configuration'
+require 'mercado_pago/create_advanced_payment'
 
 module MercadoPago
   class << self
