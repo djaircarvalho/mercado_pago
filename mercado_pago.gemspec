@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{None of current gems cover advanced payments, so here we go.}
   spec.homepage      = "https://github.com/djaircarvalho/mercado_pago"
   spec.license       = "MIT"
+  spec.required_ruby_version = '>= 1.9.3'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
