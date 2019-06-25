@@ -14,7 +14,7 @@ RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
 
   let(:subject) { described_class.new(advanced_payment).run }
   
-  describe 'run' do
+  describe '#run' do
     context 'valid ticket' do
       it 'returns success? true' do
         is_expected.to  be_success

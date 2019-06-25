@@ -1,3 +1,6 @@
+require 'blanket'
+require 'ostruct'
+
 module MercadoPago
   class BaseAction
 

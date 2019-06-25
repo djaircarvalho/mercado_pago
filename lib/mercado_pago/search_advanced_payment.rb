@@ -1,6 +1,3 @@
-require 'blanket'
-require 'ostruct'
-
 module MercadoPago
   class SearchAdvancedPayment < MercadoPago::BaseAction
 

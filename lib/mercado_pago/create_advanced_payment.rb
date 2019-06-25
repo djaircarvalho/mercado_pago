@@ -1,6 +1,3 @@
-require 'blanket'
-require 'ostruct'
-
 module MercadoPago
   class CreateAdvancedPayment < MercadoPago::BaseAction
     def initialize(advanced_payment)

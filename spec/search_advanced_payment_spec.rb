@@ -10,7 +10,7 @@ RSpec.describe MercadoPago::SearchAdvancedPayment, :vcr do
 
   let(:subject) { described_class.new(payment_id).run }
 
-  describe 'run' do
+  describe '#run' do
     context 'valid id' do
       it 'returns success? true' do
         is_expected.to  be_success
