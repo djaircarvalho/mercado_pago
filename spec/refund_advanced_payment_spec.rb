@@ -34,5 +34,14 @@ RSpec.describe MercadoPago::RefundAdvancedPayment, :vcr do
           expect(response.errors).to eq(["400 Bad Request"])
         end
       end
+
+      context 'payment not found' do
+        let(:payment_id) { 617371500101 }
+        it 'returns success? false' do
+          response = subject.run
+          expect(response).not_to  be_success
+          expect(response.errors).to eq(["404 Resource Not Found"])
+        end
+      end
   end
 end
