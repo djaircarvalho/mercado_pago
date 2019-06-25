@@ -1,9 +1,7 @@
-[![Gem Version](https://badge.fury.io/rb/mercado_pago.svg)](https://badge.fury.io/rb/mercado_pago)
+[![Gem Version](https://badge.fury.io/rb/mercado_pago.svg)](https://badge.fury.io/rb/mercado_pago) [![Build Status](https://travis-ci.org/djaircarvalho/mercado_pago.svg?branch=master)](https://travis-ci.org/djaircarvalho/mercado_pago) [![Maintainability](https://api.codeclimate.com/v1/badges/2d65728da985b0de17f8/maintainability)](https://codeclimate.com/github/djaircarvalho/mercado_pago/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/2d65728da985b0de17f8/test_coverage)](https://codeclimate.com/github/djaircarvalho/mercado_pago/test_coverage)
 # MercadoPago
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mercado_pago`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem follows the [Mercado Pago's](https://www.mercadopago.com.br/developers/pt/guides/marketplace/advanced-payments/introduction/) specification for advanced payments(split payment).
 
 ## Installation
 
@@ -21,9 +19,37 @@ Or install it yourself as:
 
     $ gem install mercado_pago
 
+
+## Configuration
+The gem will altomatically look for `ENV['RACK_ENV']` or `ENV['RAILS_ENV']` ENV vars
+
+You must create a config file:
+``` ssh
+    touch config/mercado_pago.yml
+```
+
+with the following structure:
+
+``` yml
+    production:
+      access_token: access_token_production
+      application_id: application_id_production
+    test:
+      access_token: access_token_test
+      application_id: application_id_test
+
+```
+
+for a different file path just use:
+``` ruby
+    MercadoPago.configure do |config|
+        config.config_file_path = 'path/to/config.yml'
+    end
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+   Please look at the spec folder for the test examples. They are self-explanatory
 
 ## Development
 
