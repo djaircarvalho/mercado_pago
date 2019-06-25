@@ -21,7 +21,7 @@ RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
       end
 
       it 'assigns id' do
-        expect(subject.advanced_payment.id).to eq(61690229)
+        expect(subject.advanced_payment.id).to eq(61737079)
       end
   
       it 'assigns application_id' do
@@ -37,7 +37,7 @@ RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
       end
   
       it 'assigns payments.id' do
-        expect(subject.advanced_payment.payments[0].id).to eq(4897938934)
+        expect(subject.advanced_payment.payments[0].id).to eq(4899734555)
       end
       
       it 'assigns payments.status' do

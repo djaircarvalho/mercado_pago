@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 24 Jun 2019 19:04:18 GMT
+      - Tue, 25 Jun 2019 12:40:59 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -31,7 +31,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Request-Id:
-      - d578158e-66ce-417f-8daf-236a23d3363d
+      - 2e5e0405-b629-4d64-9bbf-9d98da33648c
       X-Xss-Protection:
       - 1; mode=block
       Strict-Transport-Security:
@@ -49,5 +49,5 @@ http_interactions:
       string: ! '{"error":"unauthorized","message":"Invalid access token.","status":401,"cause":[{"code":401000,"description":"Invalid
         access token.","data":null}]}'
     http_version: 
-  recorded_at: Mon, 24 Jun 2019 19:04:18 GMT
+  recorded_at: Tue, 25 Jun 2019 12:40:59 GMT
 recorded_with: VCR 5.0.0

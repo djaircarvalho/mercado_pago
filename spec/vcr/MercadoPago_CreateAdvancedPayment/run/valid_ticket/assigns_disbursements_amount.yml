@@ -17,7 +17,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 24 Jun 2019 19:03:48 GMT
+      - Tue, 25 Jun 2019 12:40:36 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -27,7 +27,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Request-Id:
-      - b8d5fd8d-3338-49d1-a8c5-8261386460ac
+      - 2f3cf37e-51bb-42e1-b4f9-f22946b96c55
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
@@ -44,9 +44,9 @@ http_interactions:
       - '86400'
     body:
       encoding: US-ASCII
-      string: ! '{"id":61688493,"status":"pending","marketplace":"MP-MKT-4401258639222046","sponsor_id":null,"payments":[{"id":4897322679,"status":"pending","status_detail":"pending_waiting_payment","payment_type_id":"ticket","payment_method_id":"bolbradesco","token":null,"transaction_amount":130.0,"installments":1,"processing_mode":"aggregator","issuer_id":null,"coupon_amount":null,"campaign_id":null,"coupon_code":null,"description":"Service
-        charge","external_reference":"extPayment","differential_pricing_id":null,"statement_descriptor":"WWW.MktSplitterMLBTEST.COM.BR","date_of_expiration":"2019-06-30T21:52:49.000-04:00","merchant_account_id":null,"payment_method_option_id":null,"acquirer":null,"merchant_number":null,"additional_info":null,"transaction_details":{"external_resource_url":"https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id\u003d4897322679\u0026payment_method_reference_id\u003d4569824585\u0026caller_id\u003d446663922\u0026hash\u003d766c5e0a-f46e-4500-a951-599807fc52ad","total_paid_amount":130,"financial_institution":null},"net_amount":null,"taxes":null}],"disbursements":[{"id":null,"amount":130.0,"external_reference":"ext1","collector_id":438055858,"application_fee":1.0,"money_release_days":30,"additional_info":{"ip_address":null,"shipments":null,"payer":null,"items":[{"id":"item-ID-1234","title":"Item
-        Title","description":"Item description","picture_url":"https://some_image.jpg","category_id":"art","quantity":1,"unit_price":130.0}]}}],"payer":{"id":null,"email":"test_user_p@testuser.com","address":null,"type":null,"identification":{"type":"CPF","number":"30539945005"},"first_name":"Amanda","last_name":"Martins","phone":null,"registration_date":null,"entity_type":null},"order":null,"external_reference":null,"description":null,"binary_mode":true,"capture":true,"notification_url":"https://9af20ad2.ngrok.io/inbound","callback_url":null,"date_created":"2019-06-24T15:03:46.646-04:00","date_last_updated":"2019-06-24T15:03:48.112-04:00","metadata":null,"additional_info":null,"application_id":4401258639222046,"client_id":4401258639222046,"currency_id":"BRL","site_id":"MLB","owner_id":438050834,"wallet_payment":null}'
+      string: ! '{"id":61737129,"status":"pending","marketplace":"MP-MKT-4401258639222046","sponsor_id":null,"payments":[{"id":4900089730,"status":"pending","status_detail":"pending_waiting_payment","payment_type_id":"ticket","payment_method_id":"bolbradesco","token":null,"transaction_amount":130.0,"installments":1,"processing_mode":"aggregator","issuer_id":null,"coupon_amount":null,"campaign_id":null,"coupon_code":null,"description":"Service
+        charge","external_reference":"extPayment","differential_pricing_id":null,"statement_descriptor":"WWW.MktSplitterMLBTEST.COM.BR","date_of_expiration":"2019-06-30T21:52:49.000-04:00","merchant_account_id":null,"payment_method_option_id":null,"acquirer":null,"merchant_number":null,"additional_info":null,"transaction_details":{"external_resource_url":"https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id\u003d4900089730\u0026payment_method_reference_id\u003d4573261516\u0026caller_id\u003d446859022\u0026hash\u003d5782dc16-9f1d-4485-8e76-27a73ac92105","total_paid_amount":130,"financial_institution":null},"net_amount":null,"taxes":null}],"disbursements":[{"id":null,"amount":130.0,"external_reference":"ext1","collector_id":438055858,"application_fee":1.0,"money_release_days":30,"additional_info":{"ip_address":null,"shipments":null,"payer":null,"items":[{"id":"item-ID-1234","title":"Item
+        Title","description":"Item description","picture_url":"https://some_image.jpg","category_id":"art","quantity":1,"unit_price":130.0}]}}],"payer":{"id":null,"email":"test_user_p@testuser.com","address":null,"type":null,"identification":{"type":"CPF","number":"30539945005"},"first_name":"Amanda","last_name":"Martins","phone":null,"registration_date":null,"entity_type":null},"order":null,"external_reference":null,"description":null,"binary_mode":true,"capture":true,"notification_url":"https://9af20ad2.ngrok.io/inbound","callback_url":null,"date_created":"2019-06-25T08:40:31.039-04:00","date_last_updated":"2019-06-25T08:40:36.155-04:00","metadata":null,"additional_info":null,"application_id":4401258639222046,"client_id":4401258639222046,"currency_id":"BRL","site_id":"MLB","owner_id":438050834,"wallet_payment":null}'
     http_version: 
-  recorded_at: Mon, 24 Jun 2019 19:03:48 GMT
+  recorded_at: Tue, 25 Jun 2019 12:40:36 GMT
 recorded_with: VCR 5.0.0
