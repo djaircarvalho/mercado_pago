@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/mercado_pago.svg)](https://badge.fury.io/rb/mercado_pago)
 # MercadoPago
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mercado_pago`. To experiment with that code, run `bin/console` for an interactive prompt.
