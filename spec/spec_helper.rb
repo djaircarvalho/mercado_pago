@@ -1,5 +1,7 @@
 require 'simplecov'
 SimpleCov.start
+require 'simplecov-console'
+SimpleCov.formatter = SimpleCov::Formatter::Console
 require 'json'
 require 'bundler/setup'
 require 'mercado_pago'
