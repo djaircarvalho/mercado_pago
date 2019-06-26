@@ -179,5 +179,26 @@ RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
         expect(subject.errors).to eq(['rejected: cc_rejected_bad_filled_other'])
       end
     end
+
+    context "credit_card high_risk" do
+      let(:file_path) { 'spec/fixtures/payment_configs/cc_payment.json' }
+
+      before do 
+        advanced_payment.payments[0].token = 'f22ee10d6586a47a8e9e545c2a806702'
+        advanced_payment.payments[0].payment_method_id = 'master'
+        advanced_payment.payments[0].transaction_amount = 5
+        advanced_payment.disbursements[0].amount = 5
+        advanced_payment.disbursements[0].additional_info.items[0].unit_price = 5
+
+      end
+
+      it 'returns success? false' do
+        is_expected.not_to  be_success
+      end
+      
+      it 'assigns errors' do
+        expect(subject.errors).to eq(['rejected: cc_rejected_high_risk'])
+      end
+    end
   end
 end
