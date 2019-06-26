@@ -17,12 +17,16 @@ module MercadoPago
     
     def perform
       self.result_payment = AdvancedPayment.new(perform_action)
+      validate_payment_status
     rescue Blanket::Exception => e
       errors << e.message
     end
 
     def perform_action
       nil
+    end
+
+    def validate_payment_status
     end
 
     def has_errors?

@@ -2,6 +2,7 @@ module MercadoPago
   class AdvancedPayment < MercadoPago::Base
 
     attribute :id, Integer
+    attribute :status, String
     attribute :application_id, String
     attribute :notification_url, String
     attribute :payer, Payer
