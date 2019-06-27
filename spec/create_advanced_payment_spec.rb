@@ -200,5 +200,31 @@ RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
         expect(subject.errors).to eq(['rejected: cc_rejected_high_risk'])
       end
     end
+
+    context "credit_card binary mode false" do
+      let(:file_path) { 'spec/fixtures/payment_configs/cc_payment.json' }
+
+      before do
+        advanced_payment.payments[0].token = '5e0c81f9ffb85cfc3d240dded7ee2ba5'
+        advanced_payment.payments[0].payment_method_id = 'master'
+        advanced_payment.payments[0].transaction_amount = 2
+        advanced_payment.disbursements[0].amount = 2
+        advanced_payment.disbursements[0].additional_info.items[0].unit_price = 2
+        advanced_payment.binary_mode = false
+
+      end
+
+      it 'returns success? true' do
+        is_expected.to  be_success
+      end
+
+      it 'is in_progress' do
+        expect(subject.advanced_payment.status).to  eq('in_process')
+      end
+
+      it 'has no errors' do
+        expect(subject.errors).to be_empty
+      end
+    end
   end
 end

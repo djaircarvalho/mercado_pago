@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v1/advanced_payments?access_token=APP_USR-4401258639222046-052215-93e61747e6f50210577e169b695cd277-438050834
+    body:
+      encoding: UTF-8
+      string: ! '{"application_id":"4401258639222046","notification_url":"https://9af20ad2.ngrok.io/inbound","payer":{"email":"test_user_p@testuser.com","first_name":"Amanda","last_name":"Martins","identification":{"type":"CPF","number":"30539945005"}},"payments":[{"payment_type_id":"credit_card","payment_method_id":"master","token":"5e0c81f9ffb85cfc3d240dded7ee2ba5","transaction_amount":2.0,"installments":1,"processing_mode":"aggregator","description":"Service
+        charge","external_reference":"extPayment","statement_descriptor":"WWW.MktSplitterMLBTEST.COM.BR"}],"disbursements":[{"amount":2.0,"external_reference":"ext1","collector_id":438055858,"application_fee":1.0,"additional_info":{"items":[{"id":"item-ID-1234","title":"Item
+        Title","description":"Item description","picture_url":"https://some_image.jpg","category_id":"art","quantity":1,"unit_price":2.0}]}}],"binary_mode":false}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Date:
+      - Thu, 27 Jun 2019 12:29:36 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '109'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0
+      Vary:
+      - Accept,Accept-Encoding,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - f2c42e0a-4aab-4296-a2b7-617c3c79c56c
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=16070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":62053373,"status":"in_process","marketplace":"MP-MKT-4401258639222046","sponsor_id":null,"payments":[{"id":4906639100,"status":"in_process","status_detail":"pending_review_manual","payment_type_id":"credit_card","payment_method_id":"master","token":"5e0c81f9ffb85cfc3d240dded7ee2ba5","transaction_amount":2.0,"installments":1,"processing_mode":"aggregator","issuer_id":null,"coupon_amount":null,"campaign_id":null,"coupon_code":null,"description":"Service
+        charge","external_reference":"extPayment","differential_pricing_id":null,"statement_descriptor":"WWW.MktSplitterMLBTEST.COM.BR","date_of_expiration":null,"merchant_account_id":null,"payment_method_option_id":null,"acquirer":null,"merchant_number":null,"additional_info":null,"transaction_details":{"external_resource_url":null,"total_paid_amount":2,"financial_institution":null},"net_amount":null,"taxes":null}],"disbursements":[{"id":null,"amount":2.0,"external_reference":"ext1","collector_id":438055858,"application_fee":1.0,"money_release_days":30,"additional_info":{"ip_address":null,"shipments":null,"payer":null,"items":[{"id":"item-ID-1234","title":"Item
+        Title","description":"Item description","picture_url":"https://some_image.jpg","category_id":"art","quantity":1,"unit_price":2.0}]}}],"payer":{"id":null,"email":"test_user_p@testuser.com","address":null,"type":null,"identification":{"type":"CPF","number":"30539945005"},"first_name":"Amanda","last_name":"Martins","phone":null,"registration_date":null,"entity_type":null},"order":null,"external_reference":null,"description":null,"binary_mode":false,"capture":true,"notification_url":"https://9af20ad2.ngrok.io/inbound","callback_url":null,"date_created":"2019-06-27T08:27:11.611-04:00","date_last_updated":"2019-06-27T08:27:13.892-04:00","metadata":null,"additional_info":null,"application_id":4401258639222046,"client_id":4401258639222046,"currency_id":"BRL","site_id":"MLB","owner_id":438050834,"wallet_payment":null}'
+    http_version: 
+  recorded_at: Thu, 27 Jun 2019 12:29:36 GMT
+recorded_with: VCR 5.0.0
