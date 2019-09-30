@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v1/advanced_payments?access_token=APP_USR-INVALID
+    body:
+      encoding: UTF-8
+      string: ! '{"application_id":"4401258639222046","notification_url":"https://9af20ad2.ngrok.io/inbound","payer":{"email":"test_user_p@testuser.com","first_name":"Amanda","last_name":"Martins","identification":{"type":"CPF","number":"30539945005"}},"payments":[{"payment_type_id":"ticket","payment_method_id":"bolbradesco","transaction_amount":130.0,"installments":1,"processing_mode":"aggregator","description":"Service
+        charge","external_reference":"extPayment","statement_descriptor":"WWW.MktSplitterMLBTEST.COM.BR","date_of_expiration":"2019-06-30T21:52:49.000-04:00"}],"disbursements":[{"amount":130.0,"external_reference":"ext1","collector_id":438055858,"application_fee":1.0,"additional_info":{"items":[{"id":"item-ID-1234","title":"Item
+        Title","description":"Item description","picture_url":"https://some_image.jpg","category_id":"art","quantity":1,"unit_price":130.0}]}}],"binary_mode":true}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: ''
+    headers:
+      Date:
+      - Tue, 25 Jun 2019 12:40:59 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '147'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0
+      Vary:
+      - Accept,Accept-Encoding,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 2e5e0405-b629-4d64-9bbf-9d98da33648c
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=16070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"unauthorized","message":"Invalid access token.","status":401,"cause":[{"code":401000,"description":"Invalid
+        access token.","data":null}]}'
+    http_version: 
+  recorded_at: Tue, 25 Jun 2019 12:40:59 GMT
+recorded_with: VCR 5.0.0

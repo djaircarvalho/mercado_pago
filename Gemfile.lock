@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mercado_pago (0.0.1)
+    mercado_pago (0.0.2)
       blanket_wrapper
       virtus (~> 1.0.5)
       virtus_convert
