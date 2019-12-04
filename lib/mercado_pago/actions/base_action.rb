@@ -4,8 +4,8 @@ require 'ostruct'
 module MercadoPago
   class BaseAction
 
-    def initialize
-      self.rest_client = Blanket.wrap("https://api.mercadopago.com/v1/", params: {access_token: MercadoPago.configuration.access_token}, headers: {'Content-Type' =>'application/json'})
+    def initialize(access_token = nil)
+      self.rest_client = Blanket.wrap("https://api.mercadopago.com/v1/", params: {access_token: access_token || MercadoPago.configuration.access_token}, headers: {'Content-Type' =>'application/json'})
     end
 
     def run

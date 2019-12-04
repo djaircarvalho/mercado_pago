@@ -2,8 +2,8 @@ module MercadoPago
   class CreateAdvancedPayment < MercadoPago::BaseAction
     SUCCESS_STATES = %w(pending approved in_process).freeze
 
-    def initialize(advanced_payment)
-      super()
+    def initialize(advanced_payment, access_token = nil)
+      super(access_token)
       self.advanced_payment = advanced_payment
     end
 

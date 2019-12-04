@@ -1,8 +1,8 @@
 module MercadoPago
   class SearchAdvancedPayment < MercadoPago::BaseAction
 
-    def initialize(payment_id)
-      super()
+    def initialize(payment_id, access_token = nil)
+      super(access_token)
       self.payment_id = payment_id
     end
 

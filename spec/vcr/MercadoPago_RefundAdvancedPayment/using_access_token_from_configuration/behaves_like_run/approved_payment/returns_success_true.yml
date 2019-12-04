@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v1/advanced_payments/61019217/refunds?access_token=APP_USR-4401258639222046-052215-93e61747e6f50210577e169b695cd277-438050834
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 25 Jun 2019 17:17:25 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '221'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Request-Id:
+      - 3b17b7c0-52c7-4057-8b81-75b47d91550a
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=16070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":417356084,"payment_id":4866496363,"amount":130,"source":{"id":438050834,"name":"4401258639222046
+        - MercadoPago Marketplace","type":"marketplace"},"date_created":"2019-06-25T13:17:25.332-04:00","status":"approved"}]'
+    http_version: 
+  recorded_at: Tue, 25 Jun 2019 17:17:25 GMT
+- request:
+    method: get
+    uri: https://api.mercadopago.com/v1/advanced_payments/61019217?access_token=APP_USR-4401258639222046-052215-93e61747e6f50210577e169b695cd277-438050834
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 25 Jun 2019 17:17:26 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2298'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      X-Request-Id:
+      - 1d9763f6-ea0d-4a0f-ba55-529346aa8e86
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=16070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":61019217,"status":"approved","marketplace":"MP-MKT-4401258639222046","sponsor_id":null,"payments":[{"id":4866639120,"status":"approved","status_detail":"accredited","payment_type_id":"ticket","payment_method_id":"bolbradesco","token":null,"transaction_amount":130,"installments":1,"processing_mode":"aggregator","issuer_id":null,"coupon_amount":null,"campaign_id":"","coupon_code":"","description":"Service
+        charge","external_reference":"extPayment","differential_pricing_id":"","statement_descriptor":"WWW.MktSplitterMLBTEST.COM.BR","date_of_expiration":"2019-06-30T21:52:49.000-04:00","merchant_account_id":null,"payment_method_option_id":null,"acquirer":null,"merchant_number":null,"additional_info":null,"transaction_details":{"external_resource_url":"https://www.mercadopago.com/mlb/payments/ticket/helper?payment_id\u003d4866639120\u0026payment_method_reference_id\u003d4519689012\u0026caller_id\u003d444120052\u0026hash\u003d5095756d-6003-4e95-8d43-2c804295478d","total_paid_amount":130,"financial_institution":null},"net_amount":null,"taxes":null}],"disbursements":[{"id":4866496363,"amount":130,"external_reference":"ext1","collector_id":438055858,"application_fee":1,"money_release_days":3,"additional_info":{"ip_address":null,"shipments":{"receiver_address":{"zip_code":"5700","street_name":"Street","street_number":"123","floor":"4","apartment":"C"}},"payer":null,"items":[{"id":"item-ID-1234","title":"Title
+        of what you are paying for","description":"Item description","picture_url":"https://www.mercadopago.com/logomp3.gif","category_id":"art","quantity":1,"unit_price":130}]}}],"payer":{"id":null,"email":"test_user_p@testuser.com","address":null,"identification":{"type":"CPF","number":"30539945005"},"first_name":"Amanda","last_name":"Martins","phone":null},"order":{"type":"mercadopago","id":"123123123123"},"external_reference":"externalSplitter","description":"","binary_mode":true,"capture":true,"notification_url":"https://9af20ad2.ngrok.io/inbound","callback_url":null,"date_created":"2019-06-14T08:38:07.669-04:00","date_last_updated":"2019-06-14T09:46:45.458-04:00","metadata":{"asd":"asd","qwe":"qwe"},"additional_info":null,"application_id":4401258639222046,"client_id":4401258639222046,"currency_id":"BRL","site_id":"MLB","owner_id":438050834,"wallet_payment":null}'
+    http_version: 
+  recorded_at: Tue, 25 Jun 2019 17:17:26 GMT
+recorded_with: VCR 5.0.0

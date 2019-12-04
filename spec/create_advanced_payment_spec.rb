@@ -3,18 +3,12 @@ require 'spec_helper'
 RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
   let(:access_token) { 'APP_USR-4401258639222046-052215-93e61747e6f50210577e169b695cd277-438050834' }
 
-  before do
-    allow(MercadoPago).to receive(:configuration).and_return(double(access_token: access_token))
-  end
-
   let(:file_path) { 'spec/fixtures/payment_configs/ticket_payment.json' }
   let(:advanced_payment) do
     MercadoPago::AdvancedPayment.new(JSON.parse(File.read(file_path)))
   end
-
-  let(:subject) { described_class.new(advanced_payment).run }
   
-  describe '#run' do
+  shared_examples '#run' do
     context 'valid ticket' do
       it 'returns success? true' do
         is_expected.to  be_success
@@ -226,5 +220,21 @@ RSpec.describe MercadoPago::CreateAdvancedPayment, :vcr do
         expect(subject.errors).to be_empty
       end
     end
+  end
+
+  describe 'using access_token from configuration' do
+    before do
+      allow(MercadoPago).to receive(:configuration).and_return(double(access_token: access_token))
+    end
+
+    let(:subject) { described_class.new(advanced_payment).run }
+
+    it_behaves_like '#run'
+  end
+
+  describe 'using access_token in constructor' do
+    let(:subject) { described_class.new(advanced_payment, access_token).run }
+
+    it_behaves_like '#run'
   end
 end
